@@ -37,4 +37,3 @@ $EM_CONF[$_EXTKEY] = [
     'clearcacheonload' => false,
     'author_company' => null,
 ];
-
