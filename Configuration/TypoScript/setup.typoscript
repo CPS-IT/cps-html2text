@@ -1,0 +1,81 @@
+plaintext_page = PAGE
+plaintext_page {
+    typeNum = 99
+
+    config {
+        disableAllHeaderCode = 1
+        additionalHeaders = Content-type:text/plain
+    }
+
+    10 = FLUIDTEMPLATE
+    10 {
+        templateName = Default
+        templateRootPaths {
+            0 = EXT:cps_html2text/Resources/Private/Templates/
+            1 = {$plugin.tx_cpshtml2text.view.templateRootPath}
+        }
+
+        partialRootPaths {
+            0 = EXT:cps_html2text/Resources/Private/Partials/
+            1 = {$plugin.tx_cpshtml2text.view.partialRootPath}
+        }
+
+        layoutRootPaths {
+            0 = EXT:cps_html2text/Resources/Private/Layouts/
+            1 = {$plugin.tx_cpshtml2text.view.layoutRootPath}
+        }
+
+        stdWrap.postUserFunc = CPSIT\CpsHtml2Text\Utility\Html2Text->convert
+        stdWrap.postUserFunc {
+            ignoreTags = style,head,title,meta,script
+            blockElements = address,article,aside,audio,blockquote,canvas,dd,div,dl,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,hr,noscript,ol,output,p,pre,section,table,tfoot,ul,video
+
+            h1.case = upper
+            h1.strPad {
+                length = 71
+                type = both
+            }
+
+            h1.noTrimWrap (
+|
+***************************************************************************
+* | *
+***************************************************************************
+|
+            )
+
+            h2.case = upper
+            h2.noTrimWrap (
+|===========================================================================
+|
+===========================================================================|
+            )
+            h3.noTrimWrap (
+||
+---------------------------------------------------------------------------|
+            )
+            h4.noTrimWrap (
+||
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+            )
+
+            li.trim = 1
+            li.noTrimWrap (
+| * |
+|
+            )
+
+            a.attributes = href
+            a.dataWrap = [|]({register: href})
+
+            img.attributes = src, alt, title
+            img.data = register: alt
+            img.wrap = [image: |]
+            img.required = 1
+
+            hr.wrap = ---------------------------------------------------------------------------|
+        }
+    }
+
+    stdWrap.postUserFunc < tt_content.stdWrap.postUserFunc
+}
