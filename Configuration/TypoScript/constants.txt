@@ -1,0 +1,16 @@
+plugin.tx_cpshtml2text {
+
+
+    config{
+        absRefPrefix =
+    }
+
+    view {
+        # cat=/html2text/file; type=string; label=Path to template root
+        templateRootPath = EXT:cps_html2text/Resources/Private/Templates/
+        # cat=/html2text/file; type=string; label=Path to template partials
+        partialRootPath = EXT:cps_html2text/Resources/Private/Partials/
+        # cat=/html2text/file; type=string; label=Path to template layouts
+        layoutRootPath = EXT:cps_html2text/Resources/Private/Layouts/
+    }
+}
