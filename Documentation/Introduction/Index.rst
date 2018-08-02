@@ -20,7 +20,7 @@ What does it do?
 This extension provides a tool to convert HTML code into plain text, based on html2text_.
 
 To see this extension in action, simply includes the static template, then append *&type=98* to a page URL,
-to see the HTML email version of the page, or *&type=99* to see the plain text email version of the page.
+to see the HTML email version of the page, or *&type=999* to see the plain text email version of the page.
 
 
 Included resources

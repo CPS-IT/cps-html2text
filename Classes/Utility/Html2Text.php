@@ -275,7 +275,6 @@ class Html2Text
         }
 
         $name = strtolower($node->nodeName);
-        //$nextName = $this->nextChildName($node);
 
         if (in_array($name, $this->conf['ignoreTags'])) {
             return "";

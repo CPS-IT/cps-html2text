@@ -1,4 +1,10 @@
 plugin.tx_cpshtml2text {
+
+
+    config{
+        absRefPrefix =
+    }
+
     view {
         # cat=/html2text/file; type=string; label=Path to template root
         templateRootPath = EXT:cps_html2text/Resources/Private/Templates/

@@ -1,6 +1,6 @@
 {
   "name": "cpsit/cps-html2text",
-  "description": "HTML to text converter for TYPO3. Based on https://github.com/soundasleep/html2text",
+  "description": "HTML to text converter for TYPO3.",
   "type": "typo3-cms-extension",
   "license": "GPL-2.0+",
   "authors": [

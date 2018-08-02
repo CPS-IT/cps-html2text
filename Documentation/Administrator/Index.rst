@@ -39,4 +39,4 @@ See :ref:`configuration` for more details.
 Direct Mail
 ^^^^^^^^^^^
 
-cps_html2text extension configures a special page type for plain text (type=99) rendering.
+cps_html2text extension configures a special page type for plain text (type=999) rendering.

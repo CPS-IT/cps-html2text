@@ -35,7 +35,7 @@ All the properties are under ``plugin.tx_cbink``.
 TypoScript Setup
 ----------------
 
-The extension provides an example to render any page in plain text. It has page **type=99** and uses
+The extension provides an example to render any page in plain text. It has page **type=999** and uses
 the :ref:`t3tsref:stdwrap-postuserfunc` to convert the HTML output into plain text.
 
 html2text configuration

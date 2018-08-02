@@ -1,10 +1,11 @@
-plaintext_page = PAGE
-plaintext_page {
-    typeNum = 99
+tx_cpshtml2text_page = PAGE
+tx_cpshtml2text_page {
+    typeNum = 999
 
     config {
         disableAllHeaderCode = 1
         additionalHeaders = Content-type:text/plain
+        absRefPrefix = {$plugin.tx_cpshtml2text.config.absRefPrefix}
     }
 
     10 = FLUIDTEMPLATE
@@ -27,6 +28,7 @@ plaintext_page {
 
         stdWrap.postUserFunc = CPSIT\CpsHtml2Text\Utility\Html2Text->convert
         stdWrap.postUserFunc {
+            ignoreLibXmlErrors = 0
             ignoreTags = style,head,title,meta,script
             blockElements = address,article,aside,audio,blockquote,canvas,dd,div,dl,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,hr,noscript,ol,output,p,pre,section,table,tfoot,ul,video
 
@@ -77,5 +79,6 @@ plaintext_page {
         }
     }
 
+    // Execute extra post user functions from tt_content
     stdWrap.postUserFunc < tt_content.stdWrap.postUserFunc
 }

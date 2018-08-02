@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'HTML to text converter',
-    'description' => 'HTML to text converter for TYPO3. Based on https://github.com/soundasleep/html2text',
+    'description' => 'HTML to text converter for TYPO3.',
     'category' => 'misc',
     'author' => 'Vladimir Falcón Piva',
     'author_email' => 'falcon@cps-it.de',
