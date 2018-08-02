@@ -16,11 +16,11 @@ $EM_CONF[$_EXTKEY] = [
     'category' => 'misc',
     'author' => 'Vladimir Falcón Piva',
     'author_email' => 'falcon@cps-it.de',
-    'state' => 'alpha',
+    'state' => 'stable',
     'uploadfolder' => false,
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '0.0.1',
+    'version' => '1.0.0',
     'constraints' =>
         [
             'depends' =>
